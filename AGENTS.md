@@ -49,7 +49,8 @@ Do not assume direct pushes to the default branch are allowed.
 
 ## Shared .github repository defaults
 
-A repository may inherit default community-health files and templates from a special account-level or organization-level `.github` repository.
+A repository may inherit default community-health files and templates from a special account-level or
+organization-level `.github` repository.
 
 Before adding repository-local scaffolding, check whether shared defaults already exist for:
 
@@ -131,7 +132,8 @@ Do not:
 - introduce abstraction, indirection, configuration, or extension points without a present need
 - replace a local fix with a broad refactor unless the task explicitly requires it
 - add dependencies for trivial tasks
-- reinvent the wheel when an existing repository pattern, standard library feature, approved dependency, or established utility already solves the problem well
+- reinvent the wheel when an existing repository pattern, standard library feature, approved dependency,
+  or established utility already solves the problem well
 
 Use more complex solutions only when justified by:
 
@@ -157,7 +159,8 @@ Do not:
 - extract abstractions for minor, one-off, or speculative duplication
 - unify code paths that only look similar but have different responsibilities or likely future changes
 - trade readability for theoretical DRY compliance
-- introduce helpers, base classes, factories, strategies, adapters, dependency inversion, or interface boundaries without a concrete present need
+- introduce helpers, base classes, factories, strategies, adapters, dependency inversion, or interface
+  boundaries without a concrete present need
 - force textbook object-oriented patterns onto ecosystems that favor simpler or more idiomatic approaches
 
 Guidance:
@@ -224,7 +227,8 @@ Required behavior:
 - Keep configuration names, defaults, and behavior consistent.
 - Document new configuration values and defaults.
 - Prefer explicit validation of required configuration.
-- Determine the canonical source for generated files, schemas, policies, docs, config, or derived artifacts before editing them.
+- Determine the canonical source for generated files, schemas, policies, docs, config, or derived
+  artifacts before editing them.
 
 Do not:
 
@@ -238,7 +242,8 @@ Do not:
 
 ## Feature flags and rollout controls
 
-Use feature flags and rollout controls deliberately when the repository already uses them or when a risky behavior change benefits from staged rollout.
+Use feature flags and rollout controls deliberately when the repository already uses them or when a
+risky behavior change benefits from staged rollout.
 
 Required behavior:
 
@@ -277,7 +282,8 @@ Dependabot labels:
 - If the repository manages labels as code, update the label source of truth.
 - If labels are managed manually, clearly list the labels that must be created.
 - Do not reference non-existent labels in Dependabot configuration without calling out the required setup.
-- Prefer labels such as `dependencies`, `dependabot`, `security`, and ecosystem-specific labels when useful, such as `github-actions`, `docker`, `python`, or package-manager-specific labels.
+- Prefer labels such as `dependencies`, `dependabot`, `security`, and ecosystem-specific labels when
+  useful, such as `github-actions`, `docker`, `python`, or package-manager-specific labels.
 - For Dependabot security updates, prefer labels that make security relevance clear.
 - Do not create excessive label granularity unless the repository already uses that labeling strategy.
 
@@ -301,7 +307,8 @@ Before proposing a final change:
 3. Run linting if configured.
 4. Run type checks if configured.
 5. Run tests relevant to the changed code.
-6. Run the full test suite if the change affects shared infrastructure, build tooling, authentication, data access, workflows, or releases.
+6. Run the full test suite if the change affects shared infrastructure, build tooling, authentication,
+   data access, workflows, or releases.
 
 If a command cannot be run:
 
@@ -317,7 +324,8 @@ Required behavior:
 
 - Add or update tests when behavior changes.
 - Prefer unit tests for isolated logic and deterministic behavior.
-- Prefer integration tests when validating interaction between components, services, persistence, containers, workflows, or external boundaries.
+- Prefer integration tests when validating interaction between components, services, persistence,
+  containers, workflows, or external boundaries.
 - Add regression tests for bug fixes when practical.
 - Keep tests focused on observable behavior and expected outcomes.
 - Run the relevant test suite before proposing a final change.
@@ -344,7 +352,8 @@ Required behavior:
 
 - Run relevant formatting, linting, type-checking, and fast test commands before push when available.
 - Review the final diff before push.
-- Review sensitive changes a second time before push, especially workflows, security files, infrastructure, release automation, policy files, and generated artifacts.
+- Review sensitive changes a second time before push, especially workflows, security files,
+  infrastructure, release automation, policy files, and generated artifacts.
 
 Preferred local enforcement:
 
@@ -400,9 +409,11 @@ Required behavior:
 - Use placeholder values in examples and sample configuration.
 - Minimize exposure of personal, customer, or operationally sensitive data.
 - Prefer secret leak prevention over post-commit cleanup.
-- Preserve and strengthen GitHub secret scanning, push protection, custom patterns, and repository-approved scanners such as `gitleaks` when present.
+- Preserve and strengthen GitHub secret scanning, push protection, custom patterns, and
+  repository-approved scanners such as `gitleaks` when present.
 - Check for hardcoded secrets in changed files and, when appropriate, repository history.
-- Treat discovered secrets as incidents: remove exposure, rotate credentials, and document impact when required by repository policy.
+- Treat discovered secrets as incidents: remove exposure, rotate credentials, and document impact
+  when required by repository policy.
 
 Do not:
 
@@ -534,7 +545,8 @@ Treat time, time zones, and clock behavior as correctness concerns.
 Required behavior:
 
 - Prefer explicit, unambiguous time handling.
-- Prefer UTC for internal storage, comparison, and service-to-service communication unless the repository clearly requires a different model.
+- Prefer UTC for internal storage, comparison, and service-to-service communication unless the
+  repository clearly requires a different model.
 - Consider time zones, DST, locale, skew, and precision when changing time-related logic.
 - Document behavior changes for scheduling, retention, TTLs, billing windows, or expiration logic.
 
@@ -610,7 +622,8 @@ Do not:
 
 ## Web services and 12-factor principles
 
-For web services, prefer service-design practices aligned with the Twelve-Factor App methodology when compatible with repository requirements.
+For web services, prefer service-design practices aligned with the Twelve-Factor App methodology
+when compatible with repository requirements.
 
 Prefer:
 
@@ -691,7 +704,8 @@ Preserve multi-platform build behavior when already part of the workflow.
 
 ## Service configuration hardening
 
-When configuring services, especially services deployed in containers, prefer secure and hardened defaults compatible with the operational model.
+When configuring services, especially services deployed in containers, prefer secure and hardened
+defaults compatible with the operational model.
 
 Prefer:
 
@@ -794,11 +808,14 @@ Standard baseline for most code repositories unless clearly unnecessary:
 Code scanning alerts:
 
 - Prefer enabling GitHub code scanning alerts with CodeQL default setup when the repository is eligible.
-- Use advanced CodeQL setup only when the repository needs custom languages, custom queries, custom build steps, custom CodeQL model packs, or non-default behavior.
+- Use advanced CodeQL setup only when the repository needs custom languages, custom queries, custom
+  build steps, custom CodeQL model packs, or non-default behavior.
 - Preserve existing code scanning workflows, SARIF uploads, and security alert visibility.
 - Treat disabling code scanning, weakening CodeQL coverage, or removing SARIF upload workflows as security-sensitive changes.
-- Do not duplicate CodeQL default setup with an advanced CodeQL workflow unless the repository intentionally uses both default and advanced analysis.
-- If code scanning cannot be enabled, clearly state why and what repository setting, plan, permission, language support, or workflow support is missing.
+- Do not duplicate CodeQL default setup with an advanced CodeQL workflow unless the repository
+  intentionally uses both default and advanced analysis.
+- If code scanning cannot be enabled, clearly state why and what repository setting, plan,
+  permission, language support, or workflow support is missing.
 
 Prefer:
 
@@ -855,7 +872,8 @@ Repository links:
 
 - Use relative links for internal repository references.
 - Keep links portable across branches, forks, and local clones.
-- Do not use absolute GitHub blob or tree URLs for internal repository references unless a commit-pinned URL is explicitly needed.
+- Do not use absolute GitHub blob or tree URLs for internal repository references unless a
+  commit-pinned URL is explicitly needed.
 - Use absolute links only for external resources, published documentation, releases, tags, or commit-pinned references.
 
 Examples:
@@ -941,7 +959,8 @@ Do not spend review effort on:
 
 ## Human stop triggers
 
-Stop and request human review before proceeding when a change involves high-risk uncertainty, irreversible impact, or authority the agent does not have.
+Stop and request human review before proceeding when a change involves high-risk uncertainty,
+irreversible impact, or authority the agent does not have.
 
 Stop before changing:
 
