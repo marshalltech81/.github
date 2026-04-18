@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and support
+    url: https://github.com/users/marshalltech81/discussions
+    about: Please use Discussions for questions, help, and general conversation.
+  - name: Security vulnerability reporting
+    url: https://github.com/marshalltech81/.github/security/advisories/new
+    about: Please do not open public issues for security vulnerabilities.

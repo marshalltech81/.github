@@ -1,0 +1,12 @@
+# All changes require review by the org maintainer.
+
+*                                    @marshalltech81
+
+.github/workflows/                   @marshalltech81
+CODEOWNERS                           @marshalltech81
+AGENTS.md                            @marshalltech81
+GOVERNANCE.md                        @marshalltech81
+SECURITY.md                          @marshalltech81
+CODE_OF_CONDUCT.md                   @marshalltech81
+.github/ISSUE_TEMPLATE/              @marshalltech81
+.github/pull_request_template.md     @marshalltech81
