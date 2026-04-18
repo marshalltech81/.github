@@ -1,8 +1,17 @@
-rules:
-  MD013:
-    line_length: 120
-    code_blocks: false
-    tables: false
-    headings: false
-  MD029:
-    style: ordered
+# Rules are flat keys — not nested under 'rules:'
+# MD013: allow longer lines in prose documents
+MD013:
+  line_length: 120
+  code_blocks: false
+  tables: false
+  headings: false
+
+# MD029: allow ordered lists to use 1. 1. 1. style
+MD029:
+  style: ordered
+
+# MD032: AGENTS.md uses intentionally dense lists without surrounding blank lines
+MD032: false
+
+# MD041: PR template and other templates intentionally start with ##, not #
+MD041: false
