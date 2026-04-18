@@ -48,13 +48,15 @@ When contributing:
 
 ## Branches
 
-Create your work on a topic branch and open a pull request against the default branch unless the repository says otherwise.
+Create your work on a topic branch and open a pull request against the default branch unless the
+repository says otherwise.
 
 ## Commit and pull request conventions
 
 Use clear, descriptive pull request titles.
 
-Unless a repository says otherwise, use Conventional Commits for pull request titles and final squash-merge commit titles:
+Unless a repository says otherwise, use Conventional Commits for pull request titles and final
+squash-merge commit titles:
 
 - `feat:`
 - `fix:`
