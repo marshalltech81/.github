@@ -6,7 +6,8 @@ Thanks for using and exploring these projects.
 
 Use the following paths depending on what you need:
 
-- **Questions and general help**: Use GitHub Discussions if available, or open a discussion in the appropriate community space.
+- **Questions and general help**: Use GitHub Discussions if available, or open a discussion in the
+  appropriate community space.
 - **Bug reports**: Open a GitHub issue using the bug report template.
 - **Feature requests**: Open a GitHub issue using the feature request template.
 - **Security vulnerabilities**: Do **not** open a public issue. Follow the instructions in `SECURITY.md`.
