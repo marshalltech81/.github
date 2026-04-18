@@ -16,7 +16,9 @@ It is the common starting point for how my projects handle:
 
 I build and maintain a mix of personal projects, experiments, and open source work.
 
-Instead of recreating the same repository guidance every time, I keep the shared defaults here. That helps my projects stay consistent while still letting each repository override things when it needs project-specific rules.
+Instead of recreating the same repository guidance every time, I keep the shared defaults here.
+That helps my projects stay consistent while still letting each repository override things when it
+needs project-specific rules.
 
 ## What lives here
 
@@ -32,7 +34,8 @@ This repository may include files such as:
 
 ## How it works
 
-For supported file types, GitHub can use the files in this public `.github` repository as defaults for repositories owned by this account when those repositories do not define their own copy.
+For supported file types, GitHub can use the files in this public `.github` repository as defaults
+for repositories owned by this account when those repositories do not define their own copy.
 
 That keeps the basics consistent across projects without forcing every repository to duplicate the same files.
 
@@ -40,7 +43,8 @@ That keeps the basics consistent across projects without forcing every repositor
 
 If a repository has its own version of one of these files, the repository-specific version wins.
 
-If a repository has its own `.github/ISSUE_TEMPLATE/` directory, those issue templates are used instead of the defaults from this repository.
+If a repository has its own `.github/ISSUE_TEMPLATE/` directory, those issue templates are used
+instead of the defaults from this repository.
 
 ## Scope
 

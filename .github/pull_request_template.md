@@ -2,9 +2,9 @@
 
 Describe the change in 1 to 3 short bullets.
 
-- 
-- 
-- 
+-
+-
+-
 
 ## Why
 

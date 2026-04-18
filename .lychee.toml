@@ -1,0 +1,10 @@
+max_retries = 3
+timeout = 20
+exclude_loopback = true
+
+exclude = [
+    # Private security advisory form — returns 404 for unauthenticated requests
+    "^https://github\\.com/marshalltech81/\\.github/security",
+    # Discussions — returns 404 for unauthenticated crawlers
+    "^https://github\\.com/users/marshalltech81/discussions",
+]

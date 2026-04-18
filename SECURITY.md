@@ -7,7 +7,7 @@ Please do not report security vulnerabilities through public GitHub issues, pull
 Use one of the following private reporting methods:
 
 - GitHub Private Vulnerability Reporting, if it is enabled for this repository
-- Email: **68938002+marshalltech81@users.noreply.github.com**
+- Email: **<68938002+marshalltech81@users.noreply.github.com>**
 
 Please include as much of the following information as possible:
 
@@ -34,17 +34,20 @@ Response and resolution times may vary depending on availability, complexity, an
 
 Please give maintainers a reasonable opportunity to investigate and address the issue before making any public disclosure.
 
-If the report is validated as a security issue, maintainers may coordinate disclosure timing, remediation, and any related release communication.
+If the report is validated as a security issue, maintainers may coordinate disclosure timing,
+remediation, and any related release communication.
 
 ## Scope
 
-This policy applies to repositories that use this security policy unless a repository provides its own `SECURITY.md` with repository-specific instructions.
+This policy applies to repositories that use this security policy unless a repository provides its
+own `SECURITY.md` with repository-specific instructions.
 
 If a repository has its own security policy, follow that repository-specific policy instead.
 
 ## Supported versions
 
-Unless a repository states otherwise, security fixes are generally applied to the most actively maintained version or default branch.
+Unless a repository states otherwise, security fixes are generally applied to the most actively
+maintained version or default branch.
 
 Older versions may not receive security updates.
 
@@ -60,7 +63,9 @@ The following are generally out of scope unless they create a clear security imp
 
 ## Safe harbor
 
-If you act in good faith, avoid privacy violations and service disruption, and do not access or modify data beyond what is necessary to demonstrate the issue, maintainers will view your research as a good-faith effort to improve security.
+If you act in good faith, avoid privacy violations and service disruption, and do not access or
+modify data beyond what is necessary to demonstrate the issue, maintainers will view your research
+as a good-faith effort to improve security.
 
 ## Thanks
 

@@ -33,7 +33,8 @@ Contributors are welcome to:
 - submit pull requests
 - discuss tradeoffs and implementation approaches
 
-Contributions are considered on their merits, but contribution does not automatically grant decision-making authority, commit access, or maintainer status.
+Contributions are considered on their merits, but contribution does not automatically grant
+decision-making authority, commit access, or maintainer status.
 
 Over time, trusted contributors may be given additional responsibilities at the maintainer’s discretion.
 
@@ -55,4 +56,5 @@ The maintainer may decline changes that:
 
 This governance model may change as the project grows.
 
-If the project gains additional maintainers or requires a more formal structure, this document may be updated to reflect new roles, responsibilities, or decision-making processes.
+If the project gains additional maintainers or requires a more formal structure, this document may
+be updated to reflect new roles, responsibilities, or decision-making processes.
