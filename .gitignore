@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Editor swap and session files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# lychee link-check cache
+.lycheecache

@@ -37,15 +37,7 @@ jobs:
         uses: ibiqlik/action-yamllint@2576378a8e339169678f9939646ee3ee325e845c  # v3.1.1
         with:
           file_or_dir: .
-          config_data: |
-            extends: default
-            rules:
-              line-length:
-                max: 120
-                level: warning
-              document-start: disable
-              truthy:
-                allowed-values: ["true", "false"]
+          config_file: .yamllint.yml
 
   link-check:
     name: Link check

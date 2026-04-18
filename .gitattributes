@@ -1,0 +1,21 @@
+# Enforce LF line endings for all text files
+* text=auto eol=lf
+
+# Explicitly typed files
+*.md    text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.json  text eol=lf
+*.txt   text eol=lf
+
+# Tell GitHub Linguist this is a documentation repo so it does not
+# count markdown as the account's primary language
+*.md linguist-documentation=true
+
+# Binary files — no line-ending conversion, no diffs
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary
