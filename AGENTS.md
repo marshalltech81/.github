@@ -18,6 +18,7 @@ If two rules conflict, follow the higher-priority rule.
 AI agents are implementation assistants.
 
 Do not act as an autonomous owner of:
+
 - repository policy
 - architecture
 - security posture
@@ -25,6 +26,7 @@ Do not act as an autonomous owner of:
 - legal, compliance, or licensing decisions
 
 Do not:
+
 - change unrelated files
 - introduce speculative refactors
 - weaken security, CI, branch protections, or repository safeguards
@@ -67,6 +69,7 @@ Required behavior:
 - Note that a repository-local `.github/ISSUE_TEMPLATE/` directory overrides shared default issue templates.
 
 Do not:
+
 - duplicate shared scaffolding unnecessarily
 - suggest repository-local templates before checking shared defaults
 - override shared defaults implicitly without calling out the divergence
@@ -91,12 +94,14 @@ Required behavior:
 - Call out conflicts with architecture, ADRs, or roadmap direction.
 
 Do not:
+
 - re-open settled architectural decisions implicitly
 - introduce architecture changes without identifying them
 - treat roadmap documents as stronger authority than policy, architecture docs, or accepted ADRs
 - assume undocumented architecture changes are acceptable because a local implementation would be simpler
 
 Recommend a new ADR when a change:
+
 - introduces a new architectural pattern
 - changes major dependency direction
 - changes service boundaries or data ownership
@@ -117,6 +122,7 @@ Required behavior:
 - Stop once the requested problem is solved cleanly.
 
 Do not:
+
 - perform drive-by cleanup
 - mix formatting-only changes with behavior changes
 - rename files or symbols unless necessary
@@ -128,6 +134,7 @@ Do not:
 - reinvent the wheel when an existing repository pattern, standard library feature, approved dependency, or established utility already solves the problem well
 
 Use more complex solutions only when justified by:
+
 - correctness
 - security
 - maintainability
@@ -146,6 +153,7 @@ Required behavior:
 - Prefer patterns that improve clarity, correctness, testability, and maintainability.
 
 Do not:
+
 - extract abstractions for minor, one-off, or speculative duplication
 - unify code paths that only look similar but have different responsibilities or likely future changes
 - trade readability for theoretical DRY compliance
@@ -783,6 +791,15 @@ Standard baseline for most code repositories unless clearly unnecessary:
 - dependency review for repositories with package dependencies
 - code scanning or CodeQL default setup for supported languages or likely future support
 
+Code scanning alerts:
+
+- Prefer enabling GitHub code scanning alerts with CodeQL default setup when the repository is eligible.
+- Use advanced CodeQL setup only when the repository needs custom languages, custom queries, custom build steps, custom CodeQL model packs, or non-default behavior.
+- Preserve existing code scanning workflows, SARIF uploads, and security alert visibility.
+- Treat disabling code scanning, weakening CodeQL coverage, or removing SARIF upload workflows as security-sensitive changes.
+- Do not duplicate CodeQL default setup with an advanced CodeQL workflow unless the repository intentionally uses both default and advanced analysis.
+- If code scanning cannot be enabled, clearly state why and what repository setting, plan, permission, language support, or workflow support is missing.
+
 Prefer:
 
 - one clear CI workflow over many fragmented workflows in smaller repositories
@@ -883,6 +900,7 @@ Treat these areas as high-risk:
 - security-sensitive code
 - `CODEOWNERS`
 - repository policy documentation
+- code scanning, CodeQL configuration, SARIF uploads, and security alert workflows
 
 For sensitive areas:
 
