@@ -49,15 +49,7 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@8646ba30535128ac92d33dfc9133794bfdd9b411  # v2.8.0
         with:
-          args: >-
-            --verbose
-            --no-progress
-            --exclude-loopback
-            --exclude "^https://github\.com/marshalltech81/\.github/security"
-            --exclude "^https://github\.com/users/marshalltech81/discussions"
-            --max-retries 3
-            --timeout 20
-            '**/*.md'
+          args: --config .lychee.toml '**/*.md'
           fail: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
