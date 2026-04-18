@@ -118,7 +118,8 @@ Required behavior:
 - Prefer reversible changes.
 - Use the simplest solution that fully solves the stated problem.
 - Follow existing repository patterns before introducing new ones.
-- Reuse existing utilities, patterns, standard library features, and approved dependencies when they solve the problem well.
+- Reuse existing utilities, patterns, standard library features, and approved dependencies when they
+  solve the problem well.
 - Follow established best practices and conventions for the language, framework, and ecosystem in use.
 - Stop once the requested problem is solved cleanly.
 
@@ -151,7 +152,8 @@ Required behavior:
 - Reduce meaningful duplication when it improves correctness, consistency, or maintainability.
 - Prefer reuse when duplicated logic is truly shared in behavior and likely to evolve together.
 - Prefer small, local abstractions before broad shared frameworks or utility layers.
-- Prefer known, established design patterns when they are already used in the repository or are idiomatic for the ecosystem.
+- Prefer known, established design patterns when they are already used in the repository or are idiomatic
+  for the ecosystem.
 - Prefer patterns that improve clarity, correctness, testability, and maintainability.
 
 Do not:
@@ -272,13 +274,17 @@ Required behavior:
 - Consider maintenance health, ecosystem fit, ownership, security, license, and long-term support burden.
 - Update lockfiles when dependency changes require them.
 - Preserve required notices, attribution, and legal headers.
-- Preserve artifact signing, provenance, SBOM, attestation, or verification steps when they are already part of the repository.
-- Prefer pinned versions for build-critical tools, actions, and dependencies when the repository already follows that pattern.
-- When changing Dependabot configuration, ensure referenced labels exist or update the repository’s label source of truth.
+- Preserve artifact signing, provenance, SBOM, attestation, or verification steps when they are already
+  part of the repository.
+- Prefer pinned versions for build-critical tools, actions, and dependencies when the repository already
+  follows that pattern.
+- When changing Dependabot configuration, ensure referenced labels exist or update the repository’s
+  label source of truth.
 
 Dependabot labels:
 
-- When adding or modifying Dependabot configuration, ensure appropriate Dependabot-related labels exist for the repository.
+- When adding or modifying Dependabot configuration, ensure appropriate Dependabot-related labels exist
+  for the repository.
 - If the repository manages labels as code, update the label source of truth.
 - If labels are managed manually, clearly list the labels that must be created.
 - Do not reference non-existent labels in Dependabot configuration without calling out the required setup.
@@ -451,7 +457,8 @@ Required behavior:
 - Fail fast for invalid configuration and unrecoverable startup conditions.
 - Use retries, timeouts, and fallback behavior only when appropriate for the system boundary.
 - Keep error messages actionable and safe.
-- Add or update logs, metrics, tracing, or health checks when they materially improve validation or production visibility.
+- Add or update logs, metrics, tracing, or health checks when they materially improve validation or
+  production visibility.
 - Keep logs useful for debugging without leaking secrets or sensitive data.
 - Consider startup, shutdown, retries, timeouts, and failure visibility.
 - Consider rollback strategy for risky changes.
@@ -476,11 +483,13 @@ Design for repeated execution, partial failure, and concurrent activity when the
 
 Required behavior:
 
-- Consider concurrency and duplicate execution for handlers, jobs, webhooks, background tasks, and APIs that may be retried.
+- Consider concurrency and duplicate execution for handlers, jobs, webhooks, background tasks, and APIs
+  that may be retried.
 - Prefer idempotent operations when retries, duplicate delivery, or repeated requests are realistic.
 - Use bounded retries with clear stop conditions.
 - Prefer exponential backoff for retrying remote API calls when retries are appropriate.
-- Prefer exponential backoff with jitter for remote API retries when the repository already uses retry helpers or middleware.
+- Prefer exponential backoff with jitter for remote API retries when the repository already uses retry
+  helpers or middleware.
 - Use timeouts for network and remote boundary operations when the repository pattern supports them.
 - Consider locking, deduplication, sequencing, or optimistic concurrency when shared state is involved.
 - Keep retry behavior visible in logs, metrics, or tracing when it materially affects operability.
@@ -570,7 +579,8 @@ Default Python tooling for modern repositories:
 
 Required behavior:
 
-- Follow the repository’s existing configuration unless the task explicitly includes toolchain migration or modernization.
+- Follow the repository’s existing configuration unless the task explicitly includes toolchain migration
+  or modernization.
 - Do not introduce a second formatter when one formatter is already standard.
 - Do not mix competing lint or format tools without a clear reason.
 - Do not replace the repository’s Python toolchain as part of an unrelated change.
@@ -678,7 +688,8 @@ Required behavior:
 - Keep build context small and avoid copying unnecessary files into images.
 - Reuse existing base images, build stages, and container patterns when they already solve the problem well.
 - Prefer dedicated service users over root execution when the application can run without privileges.
-- Treat container hardening as a default goal, but do not break runtime compatibility just to satisfy a hardening preference.
+- Treat container hardening as a default goal, but do not break runtime compatibility just to satisfy
+  a hardening preference.
 - When using Docker Compose, prefer Docker secrets over environment variables for sensitive values when practical.
 - Keep non-sensitive configuration separate from secret material.
 
@@ -811,7 +822,8 @@ Code scanning alerts:
 - Use advanced CodeQL setup only when the repository needs custom languages, custom queries, custom
   build steps, custom CodeQL model packs, or non-default behavior.
 - Preserve existing code scanning workflows, SARIF uploads, and security alert visibility.
-- Treat disabling code scanning, weakening CodeQL coverage, or removing SARIF upload workflows as security-sensitive changes.
+- Treat disabling code scanning, weakening CodeQL coverage, or removing SARIF upload workflows as
+  security-sensitive changes.
 - Do not duplicate CodeQL default setup with an advanced CodeQL workflow unless the repository
   intentionally uses both default and advanced analysis.
 - If code scanning cannot be enabled, clearly state why and what repository setting, plan,
@@ -1011,7 +1023,8 @@ If a tool requires a tool-specific instruction file such as `CLAUDE.md`:
 
 - make that file a thin shim to `AGENTS.md`
 - do not maintain a separate, divergent copy of repository rules
-- only add tool-specific instructions when they are required for that tool and cannot be expressed cleanly in `AGENTS.md`
+- only add tool-specific instructions when they are required for that tool and cannot be expressed
+  cleanly in `AGENTS.md`
 
 Goal:
 

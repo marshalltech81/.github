@@ -32,7 +32,8 @@ Response and resolution times may vary depending on availability, complexity, an
 
 ## Disclosure expectations
 
-Please give maintainers a reasonable opportunity to investigate and address the issue before making any public disclosure.
+Please give maintainers a reasonable opportunity to investigate and address the issue before making
+any public disclosure.
 
 If the report is validated as a security issue, maintainers may coordinate disclosure timing,
 remediation, and any related release communication.
