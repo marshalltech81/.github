@@ -1,7 +1,5 @@
 max_retries = 3
 timeout = 20
-no_progress = true
-verbose = true
 exclude_loopback = true
 
 exclude = [
