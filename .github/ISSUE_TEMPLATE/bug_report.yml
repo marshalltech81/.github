@@ -70,7 +70,9 @@ body:
     id: logs
     attributes:
       label: Logs, screenshots, or additional context
-      description: Paste logs or add screenshots if they help explain the issue
+      description: >-
+        Paste logs or add screenshots if they help explain the issue. Issues are public: remove secrets,
+        tokens and personal data (including any email content) first.
       render: shell
     validations:
       required: false

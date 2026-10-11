@@ -55,8 +55,9 @@ repository says otherwise.
 
 Use clear, descriptive pull request titles.
 
-Unless a repository says otherwise, use Conventional Commits for pull request titles and final
-squash-merge commit titles:
+Unless a repository says otherwise (for example in its `AGENTS.md`, whose commit, issue and pull request
+conventions take precedence), use Conventional Commits for pull request titles and final squash-merge
+commit titles:
 
 - `feat:`
 - `fix:`
@@ -121,7 +122,7 @@ When reporting a bug, include:
 - what you expected to happen
 - steps to reproduce
 - environment or version details if relevant
-- logs or screenshots when helpful
+- logs or screenshots when helpful, with secrets, tokens and personal data removed
 
 Use the bug report template when available.
 

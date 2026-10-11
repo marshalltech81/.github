@@ -28,9 +28,10 @@ This repository may include files such as:
 - `CONTRIBUTING.md`
 - `SECURITY.md`
 - `SUPPORT.md`
+- `GOVERNANCE.md`
 - `FUNDING.yml`
 - `.github/ISSUE_TEMPLATE/`
-- `pull_request_template.md`
+- `.github/pull_request_template.md`
 
 ## How it works
 
