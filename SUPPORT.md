@@ -28,7 +28,7 @@ When asking for help, include:
 - what you expected to happen
 - steps to reproduce, if relevant
 - version, environment, or commit details if known
-- logs, screenshots, or error messages if helpful
+- logs, screenshots, or error messages if helpful, with secrets, tokens and personal data removed
 
 ## Response expectations
 
